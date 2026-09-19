@@ -12,13 +12,13 @@ void WordCount()
         if(c == '\n') { nl++; }
         if(c == '\n' || c == ' ' || c == '\t')
         {
-            if(in_word = 1)
-            {
-                nw++;
-            }
             in_word = 0;
         }
-
+        else if(in_word == 0)
+        {
+            in_word = 1;
+            nw++;
+        }
     }
     printf("characters: %d, words: %d, lines: %d\n", nc, nw, nl);
 }
