@@ -4,6 +4,6 @@
 
 int main(void)
 {
-    WordCount();
+    PrintByLine();
     return(0);
 }

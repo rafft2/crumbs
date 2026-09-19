@@ -1,6 +1,31 @@
 #ifndef BASICS_C
 #define BASICS_C
 
+void PrintByLine()
+{
+    int c;
+    int in_word = 0;
+    while((c = getchar()) != EOF)
+    {
+        if((c == '\n' || c == ' ' || c == '\t'))
+        {
+            if(in_word == 1)
+            {
+                in_word = 0;
+                putchar('\n');
+            }
+        }
+        else
+        {
+            putchar(c);
+            if(in_word == 0)
+            {
+                in_word = 1;
+            }
+        }   
+    }
+}
+
 void WordCount()
 {
     int c;
